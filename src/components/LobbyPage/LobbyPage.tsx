@@ -38,28 +38,24 @@ const LobbyPage: React.FC = () => {
 //         />  
 // })
     const dispatch = useDispatch()
+    const codesData = useSelector((state: IRootState) => state.codes.value);
+    console.log(codesData)
+    const codes = codesData.map((code:any) => {
+            return <CardCode 
+            _id = {code._id}
+            title = {code.title}
+            // code = {code.code}
+            key = {code._id}
+        />  
+})
     return (
         <div className="lobby-page-content">
             <h1 className="lobby-title">Lobby Page</h1>
             <h2>Choose code block</h2>
             <div className="all-buttons">
                 <div>
+                {codes}
                 </div>
-                <button>
-                    async 
-                </button>
-                <button>
-                    Redux
-                </button>
-                <button>
-                    style component
-                </button>
-                <button>
-                    style component
-                </button>
-                <button>
-                    aaaaa
-                </button>
             </div>
         </div>
     )

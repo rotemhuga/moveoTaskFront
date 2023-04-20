@@ -7,7 +7,7 @@ export interface ICode {
     code: string;
 }
 
-const getCodesData = await fetch ("http:localhost:8000/moveoTask/codes") 
+const getCodesData = await fetch ("http://localhost:8000/moveoTask/codes") 
     .then((response) => response.json())
     .then((data) => {
         return data;
@@ -18,7 +18,7 @@ const getCodesData = await fetch ("http:localhost:8000/moveoTask/codes")
 
 console.log(getCodesData)
 
-// const allCodesValue:any = await getCodesData
+const allCodesValue:any = await getCodesData
 
 export const codeSlice = createSlice({
     name:"codes",
