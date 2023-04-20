@@ -28,15 +28,6 @@ const LobbyPage: React.FC = () => {
     //     socket.emit("send_message", { message: event.target.value });
     // };
 
-//  
-// const codes = allCodes.map((code:any) => {
-//             return <CardCode 
-//             _id = {code._id}
-//             title = {code.title}
-//             code = {code.code}
-//             key = {code._id}
-//         />  
-// })
     const dispatch = useDispatch()
     const codesData = useSelector((state: IRootState) => state.codes.value);
     console.log(codesData)

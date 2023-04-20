@@ -28,12 +28,11 @@ const OneCodePage: React.FC = () => {
             <h1 className="title-one-page">Share your Code Here</h1>
             <input  
             placeholder='write your code here' 
-            value={message}
+            value={messageReceived}
             onChange={handleInputChange}
             className="input-content"
             type="text"
             />
-            <p>{messageReceived}</p>
         </div>
     )
 }
