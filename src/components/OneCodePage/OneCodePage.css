@@ -5,8 +5,16 @@
     align-items: center;
 }
 
+.code-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .title-one-page{
     margin-top: 30px;
+    display: flex;
+    text-align: center;
 }
 
 .input-content{
@@ -15,6 +23,5 @@
     border-radius: 10px;
     margin-top: 50px;
     text-align: center;
-    
 }
 

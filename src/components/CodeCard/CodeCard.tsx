@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import { IRootState } from "../../store/store";
 import { ObjectId } from 'mongoose';
+import { Editor } from '@monaco-editor/react';
+import { useState } from 'react';
 
 export interface ICodeCard {
 	_id?: ObjectId;
@@ -11,12 +13,17 @@ export interface ICodeCard {
 }
 
 const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
+    const [code, setCode] = useState("");
+    const handleEditorChange = (value: string) => {
+        setCode(value);
+      };
     return (
         <button className={`card-code ${props._id}`} >
             <div className="card-code-div">
                 <div className="title-card-code">{props.title} </div>
                 <div className="content-card-code">
-                    {props.code}</div>
+                    {props.code}
+                </div>
             </div>
         </button>
     ) 
