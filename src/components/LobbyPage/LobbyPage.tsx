@@ -53,9 +53,7 @@ const LobbyPage: React.FC = () => {
             <h1 className="lobby-title">Lobby Page</h1>
             <h2>Choose code block</h2>
             <div className="all-buttons">
-                <div>
                 {codes}
-                </div>
             </div>
         </div>
     )

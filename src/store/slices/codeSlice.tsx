@@ -5,6 +5,7 @@ export interface ICode {
     _id: ObjectId;
     title: string;
     code: string;
+    roomNumber:string;
 }
 
 const getCodesData = await fetch ("http://localhost:8000/moveoTask/codes") 

@@ -7,6 +7,7 @@ export interface ICodeCard {
 	_id?: ObjectId;
     title?: string;
 	code?: string;
+    roomNumber?: string;
 }
 
 const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
