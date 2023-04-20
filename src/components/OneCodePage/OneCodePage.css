@@ -5,16 +5,28 @@
     align-items: center;
 }
 
-.code-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .title-one-page{
     margin-top: 30px;
     display: flex;
     text-align: center;
+}
+
+.code-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.language-name{
+    background-color: #383838;
+    font-weight: 600;
+    font-size: 16px;
+    height: 4vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-content{
