@@ -12,7 +12,7 @@ const LobbyPage: React.FC = () => {
     //     event.preventDefault()
     //     console.log(event)
     // }
-
+    const navigate = useNavigate()
     const detailscode = useParams()
     const dispatch = useDispatch()
     const codesData = useSelector((state: IRootState) => state.codes.value);
@@ -22,8 +22,7 @@ const LobbyPage: React.FC = () => {
             title = {code.title}
             // code = {code.code}
             key = {code._id}
-            // OnClick={handleOpenPage}
-        />  
+            OnClick={() => navigate('/oneCodePage')}/>  
 })
     return (
         <div className="lobby-page-content">

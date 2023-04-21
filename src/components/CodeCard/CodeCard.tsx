@@ -40,24 +40,3 @@ const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
 export default CardCode
 
 
-// const SubjectCard: React.FC<ICodeCard> = (props: ICodeCard) => {
-// 	const codeData = useSelector((state: IRootState) => state.codes.value);
-// 	const navigator = useNavigate();
-
-// 	const getSpecificCodeID = (subject: string) => {
-// 		return codeData.filter((sub) => sub.title === subject);
-// 	};
-// 	const handelCardClick = (subject: string) => {
-// 		const currentSubjectDate: ICodes[] = getSpecificCodeID(subject);
-// 		navigator(`/ShareSpace/${currentSubjectDate[0]._id}`);
-// 	};
-// 	return (
-// 		<div
-// 			className="subject-card"
-// 			onClick={() => handelCardClick(props.title)}>
-// 			<span>{props.title}</span>
-// 		</div>
-// 	);
-// };
-
-// export default SubjectCard;
