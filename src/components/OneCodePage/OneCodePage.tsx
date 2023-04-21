@@ -22,6 +22,7 @@ const OneCodePage: React.FC = () => {
   return (
     <div className="APP">
       <h1 className="title-one-page">Share your Code Here</h1>
+      <div className="subject-title">Subject: redux</div>
       <div className="language-name">javascript</div>
       <div className="code-content">
         <Editor
