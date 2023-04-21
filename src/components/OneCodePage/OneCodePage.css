@@ -3,6 +3,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.go-back-button{
+    background-color: #383838;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: 16px;
+    font-weight: 600;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+
 }
 
 .title-one-page{
@@ -25,12 +40,6 @@
     border-radius: 5px;
 }
 
-.code-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
 
 .language-name{
     background-color: #383838;
@@ -43,6 +52,12 @@
     align-items: center;
 }
 
+.code-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
 .input-content{
     width: 800px;
     height: 500px;
