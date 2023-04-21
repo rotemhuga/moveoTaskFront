@@ -13,7 +13,6 @@ const LobbyPage: React.FC = () => {
     //     console.log(event)
     // }
     const navigate = useNavigate()
-    const detailscode = useParams()
     const dispatch = useDispatch()
     const codesData = useSelector((state: IRootState) => state.codes.value);
     const codes = codesData.map((code:any) => {

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 import "../OneCodePage/OneCodePage.css";
 import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const socket = io("http://localhost:8000");
 
@@ -10,6 +11,8 @@ const OneCodePage: React.FC = () => {
   
   const [code, setCode] = useState("");
   const navigate = useNavigate()
+  // const detailsCode = useParams()
+  // console.log(detailsCode)
 
   useEffect(() => {
     socket.on("code", (data) => {

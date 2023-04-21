@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { IRootState } from "../../store/store";
 import { ObjectId } from 'mongoose';
 import { Editor } from '@monaco-editor/react';
+import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 export interface ICodeCard {
@@ -20,11 +21,23 @@ const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
     const handleOpenPage = async (event:any) => {
         event.preventDefault()
         console.log(event.target.id)
+        const codeFromEvent = event.target.id
+        navigate(`/oneCodePage/${codeFromEvent}`)
     }
     
-    // const handleEditorChange = (value: string) => {
-    //     setCode(value);
-    //   };
+    const allCodes = useSelector(
+        (state:IRootState) => state.codes.value
+    );
+
+    const detailscode = useParams()
+    console.log(detailscode)
+ 
+    // const codeObj = allCodes.find((code:any) => detailscode.id == code.id)
+    // const newArrDishes = codeObj?.codes?.map((dishId:any) => {
+    //     const singleDish = allDishesState.find((dishObj:IdishesValue) => dishObj.id == dishId)
+    //     return singleDish
+    // })
+
     return (
         <button className={`card-code`} id={props.id} onClick={handleOpenPage} >
             <div className="card-code-div">

@@ -11,7 +11,7 @@ function App() {
 		<BrowserRouter>
       <Routes>
         <Route path="/" element={<LobbyPage />} />
-        <Route path="/oneCodePage" element={<OneCodePage />} />
+        <Route path="/oneCodePage/:id" element={<OneCodePage />} />
       </Routes>
 		</BrowserRouter>
   );
