@@ -85,7 +85,7 @@ import "../OneCodePage/OneCodePage.css";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-const socket = io("https://moveotaskfront.onrender.com");
+const socket = io("https://moveotasksback.onrender.com");
 
 const OneCodePage: React.FC = () => {
   

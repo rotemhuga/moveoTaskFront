@@ -8,7 +8,7 @@ export interface ICode {
     roomNumber:string;
 }
 
-const getCodesData = await fetch ("https://moveotaskfront.onrender.com/moveoTask/codes") 
+const getCodesData = await fetch ("https://moveotasksback.onrender.com/moveoTask/codes") 
     .then((response) => response.json())
     .then((data) => {
         return data;
