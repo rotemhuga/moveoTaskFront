@@ -17,15 +17,10 @@ const getCodesData = await fetch ("https://moveotasksback.onrender.com/moveoTask
         console.log(err.message);
     });
 
-console.log(getCodesData)
-
-// const allCodesValue:any = await getCodesData
-
 export const codeSlice = createSlice({
     name:"codes",
     initialState: {
         value:getCodesData,
-        currentRoomValue: getCodesData._id
     },
     reducers: {
         printData:(state) =>{
@@ -34,10 +29,6 @@ export const codeSlice = createSlice({
         codePageFilter:(state) => {
             state.value = state.value;
         },
-        getCurrentRoom:(state,action) =>{
-            state.currentRoomValue = action.payload
-        }
-
     }
 })
 
