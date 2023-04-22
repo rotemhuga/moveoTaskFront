@@ -3,12 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { io, Socket } from "socket.io-client";
 import "@monaco-editor/react";
 import "../OneCodePage/OneCodePage.css";
-import { useNavigate, useParams } from "react-router-dom";
-import { ICodeCard } from "../CodeCard/CodeCard";
-
-interface IRoomId {
-  roomCodeId?: ICodeCard;
-}
+import { useNavigate } from "react-router-dom";
 
 interface ICodeEvent {
   code: string;
@@ -17,7 +12,6 @@ interface ICodeEvent {
 }
 
 const OneCodePage: React.FC<any> = (roomCodeId) => {
-  console.log(roomCodeId)
   const navigate = useNavigate();
   const [socket, setSocket] = useState<Socket | null>(null);
   const [editorValue, setEditorValue] = useState("");
@@ -29,7 +23,6 @@ const OneCodePage: React.FC<any> = (roomCodeId) => {
       query: { roomCodeId },
     });
     setSocket(updateSocket);
-    console.log(roomCodeId)
 
     return () => {
       updateSocket.disconnect();
@@ -45,7 +38,7 @@ const OneCodePage: React.FC<any> = (roomCodeId) => {
       });
 
       socket.on("roomSize", (event: any) => {
-        console.log("eventRoomSize", event.roomSize);
+        console.log("RoomSize:", event.roomSize);
         if (event.roomSize > 1) {
           setCanEdit(true);
         } 
