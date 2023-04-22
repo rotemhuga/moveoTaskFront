@@ -13,11 +13,12 @@
    flex-direction: row;
    justify-content: center;
    grid-template-columns: auto auto auto;
-   gap: 5px;
+   gap: 10px;
 }
 
 .card-code {
    background-color: white;
+   cursor: pointer;
    color: #383838;
    width: 200px;
    height: 180px;
@@ -25,6 +26,11 @@
    font-family: "Anton", sans-serif;
    font-weight: 700;
    font-size: 20px;
+   transition: transform .2s; 
+}
+
+.card-code:hover {
+   transform: scale(1.2);
 }
 
 @media (max-width: 700px) {
