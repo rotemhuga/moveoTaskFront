@@ -14,6 +14,10 @@ export interface ICodeCard {
     OnClick?: React.MouseEventHandler<HTMLButtonElement> 
 }
 
+export interface IdRoom {
+    id?: string;
+}
+
 const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
     const navigate = useNavigate(); 
     const [code, setCode] = useState("");
@@ -23,7 +27,7 @@ const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
         console.log(event)
         console.log(event.target.id)
         const codeFromEvent = event.target.id
-        navigate(`/oneCodePage/${codeFromEvent}`)
+        navigate(`/oneCodePage/${props.id}`)
     }
     
     const allCodes = useSelector(

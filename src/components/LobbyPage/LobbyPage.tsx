@@ -19,7 +19,6 @@ const LobbyPage: React.FC = () => {
             return <CardCode 
             id = {code._id}
             title = {code.title}
-            // code = {code.code}
             key = {code._id}
             OnClick={() => navigate('/oneCodePage')}/>  
 })

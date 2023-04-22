@@ -25,7 +25,7 @@ export const codeSlice = createSlice({
     name:"codes",
     initialState: {
         value:getCodesData,
-        titleValue: getCodesData.title
+        currentRoomValue: getCodesData._id
     },
     reducers: {
         printData:(state) =>{
@@ -33,7 +33,11 @@ export const codeSlice = createSlice({
         },
         codePageFilter:(state) => {
             state.value = state.value;
+        },
+        getCurrentRoom:(state,action) =>{
+            state.currentRoomValue = action.payload
         }
+
     }
 })
 

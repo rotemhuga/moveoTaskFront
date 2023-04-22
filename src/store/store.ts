@@ -5,6 +5,7 @@ export interface IRootState {
 	codes: {
     titleValue: string;
 		value: ICode[];
+	currentRoom: ICode | null;
 	}
 }
 
