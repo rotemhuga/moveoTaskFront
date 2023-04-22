@@ -20,6 +20,7 @@ const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
 
     const handleOpenPage = async (event:any) => {
         event.preventDefault()
+        console.log(event)
         console.log(event.target.id)
         const codeFromEvent = event.target.id
         navigate(`/oneCodePage/${codeFromEvent}`)
@@ -31,12 +32,6 @@ const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
 
     const detailscode = useParams()
     console.log(detailscode)
- 
-    // const codeObj = allCodes.find((code:any) => detailscode.id == code.id)
-    // const newArrDishes = codeObj?.codes?.map((dishId:any) => {
-    //     const singleDish = allDishesState.find((dishObj:IdishesValue) => dishObj.id == dishId)
-    //     return singleDish
-    // })
 
     return (
         <button className={`card-code`} id={props.id} onClick={handleOpenPage} >
@@ -51,5 +46,7 @@ const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
 }
 
 export default CardCode
+
+
 
 
