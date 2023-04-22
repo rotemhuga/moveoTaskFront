@@ -8,7 +8,7 @@ export interface ICode {
     roomNumber:string;
 }
 
-const getCodesData = await fetch ("http://localhost:8000/moveoTask/codes") 
+const getCodesData = await fetch ("https://moveotasksback.onrender.com/codes") 
     .then((response) => response.json())
     .then((data) => {
         return data;
@@ -19,7 +19,7 @@ const getCodesData = await fetch ("http://localhost:8000/moveoTask/codes")
 
 console.log(getCodesData)
 
-const allCodesValue:any = await getCodesData
+// const allCodesValue:any = await getCodesData
 
 export const codeSlice = createSlice({
     name:"codes",

@@ -26,7 +26,7 @@ const LobbyPage: React.FC = () => {
     return (
         <div className="lobby-page-content">
             <h1 className="lobby-title">Lobby Page</h1>
-            <h2>Choose code block</h2>
+            <h2>Choose your Room</h2>
             <div className="all-buttons">
                 {codes}
             </div>
