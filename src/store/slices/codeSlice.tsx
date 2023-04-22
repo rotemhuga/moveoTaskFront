@@ -24,7 +24,8 @@ console.log(getCodesData)
 export const codeSlice = createSlice({
     name:"codes",
     initialState: {
-        value:getCodesData
+        value:getCodesData,
+        titleValue: getCodesData.title
     },
     reducers: {
         printData:(state) =>{

@@ -84,6 +84,9 @@ import { io } from "socket.io-client";
 import "../OneCodePage/OneCodePage.css";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { IRootState } from "../../store/store";
+import CardCode from "../CodeCard/CodeCard";
 
 const socket = io("https://moveotasksback.onrender.com");
 
@@ -92,7 +95,7 @@ const OneCodePage: React.FC = () => {
   // const [room, setRoom] = useState ("")
   const [code, setCode] = useState("");
   const navigate = useNavigate()
-
+  
   // const joinRoom = () => {
   //   if (room !== "") {
   //     socket.emit("join_room", room);
@@ -117,6 +120,16 @@ const OneCodePage: React.FC = () => {
     socket.emit("code", value);
   };
 
+//   const titleValue = useSelector((state: IRootState) => state.codes.value);
+//   const codeTitle = titleValue.map((code:any) => {
+//     return <CardCode 
+//     id = {code._id}
+//     title = {code.title}
+//     // code = {code.code}
+//     key = {code._id}
+//     />  
+// })
+
   return (
     <div className="APP">
       	<button
@@ -134,6 +147,7 @@ const OneCodePage: React.FC = () => {
         <button onClick={joinRoom}> Join Room</button> */}
       <h1 className="title-one-page">Share your Code Here</h1>
       <div className="subject-title">Subject: redux</div>
+      <div>{}</div>
       <div className="language-name">javascript</div>
       <div className="code-content">
         <Editor
