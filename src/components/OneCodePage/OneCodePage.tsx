@@ -46,7 +46,7 @@ const OneCodePage: React.FC<any> = (roomCodeId) => {
     }
   }, [socket]);
 
-  const handleEditorDidMount = (editor: any, monaco: any) => {
+  const handleEditorDidMount = (editor: any) => {
     editorRef.current = editor;
   };
 

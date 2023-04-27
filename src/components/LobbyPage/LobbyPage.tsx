@@ -14,7 +14,7 @@ const LobbyPage: React.FC = () => {
             id = {code._id}
             title = {code.title}
             key = {code._id}
-            OnClick={() => navigate('/oneCodePage')}/>  
+            OnClick={() => navigate(`/oneCodePage/`)}/>  
 })
     return (
         <div className="lobby-page-content">

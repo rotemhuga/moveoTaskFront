@@ -8,10 +8,6 @@ export interface ICodeCard {
     OnClick?: React.MouseEventHandler<HTMLButtonElement> 
 }
 
-export interface IdRoom {
-    id?: string;
-}
-
 const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
     const navigate = useNavigate(); 
 
@@ -21,9 +17,9 @@ const CardCode: React.FC<ICodeCard> = (props:ICodeCard)=> {
     }
 
     return (
-        <button className={`card-code`} id={props.id} onClick={handleOpenPage} >
+        <button className={`card-code`} id={props.id} onClick={handleOpenPage}>
             <div className="card-code-div">
-                <div className="title-card-code">{props.title} </div>
+                <div className="title-card-code">{props.title}</div>
                 <div className="content-card-code">
                     {props.code}
                 </div>

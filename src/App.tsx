@@ -5,6 +5,7 @@ import OneCodePage from '../src/components/OneCodePage/OneCodePage';
 
 function App() {
   const roomIdParams = useParams()
+  console.log(roomIdParams)
 
   return (
 		<BrowserRouter>
